@@ -4,15 +4,24 @@
 <body>
 <nav th:replace="layouts :: navbar"></nav>
 <div class="container">
-    <form action="/employees/save" th:object="${employee}"  method="POST">
+    <form action="/employees/save" th:object="${employee}"  method="POST" >
 
-        <input type="text" placeholder="First Name" th:field="${employee.firstName}">
-        <input type="text" placeholder="Last Name" th:field="${employee.lastName}">
-        <input type="text" placeholder="Email" th:field="${employee.email}">
+        <div class="form-group">
+            <input type="text" placeholder="First Name" th:field="${employee.firstName}" class="form-control">
+
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Last Name" th:field="${employee.lastName}" class="form-control">
+
+        </div>
+        <div class="form-group">
+            <input type="email" placeholder="Email" th:field="${employee.email}"  class="form-control">
+
+        </div>
 
 
 
-        <button type="submit">Create Employee</button>
+        <button type="submit" class="btn btn-primary">Create Employee</button>
 
     </form>
 </div>
